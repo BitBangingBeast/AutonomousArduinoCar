@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between vertical and horizontal controls */
+}
+
+.vertical-controls, .horizontal-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.horizontal-controls {
+    flex-direction: row; /* Align direction buttons next to each other */
+}
+
+.menu-container {
+    margin-top: 20px; /* Space above the menu button */
+}
+
+.control-btn, .menu-btn {
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+.control-btn {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-btn {
+    padding: 10px;
+    font-size: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 600px) {
+    .control-btn, .menu-btn {
+        font-size: 20px;
+        padding: 15px;
+    }
+    .control-btn {
+        width: 90px; /* Adjust size for mobile */
+        height: 90px;
+    }
+    .menu-btn {
+        width: 70px; /* Adjust size for mobile */
+        height: 70px;
+    }
+}
+.slider {
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 50%; /* Horizontal slider width */
+    height: 25px; /* Horizontal slider height */
+    background: #d3d3d3; /* Slider background */
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px; /* Handle width */
+    height: 25px; /* Handle height */
+    background: #007bff; /* Handle color */
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Handle width */
+    height: 25px; /* Handle height */
+    background: #007bff; /* Handle color */
+    cursor: pointer;
+}
+
+.vertical-slider-container {
+    transform: rotate(270deg);
+    height: 100px; /* Match or exceed the slider length */
+    width: 25px; /* Can adjust based on slider thickness */
+    display: inline-block;
+}
+
+.vertical-slider {
+    width: 100px; /* This will be the "height" of the vertical slider */
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin: 5px 0; /* Add some space around inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#lidarContainer, #compassContainer {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+}
